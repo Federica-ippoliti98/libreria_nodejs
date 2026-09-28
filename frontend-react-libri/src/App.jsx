@@ -12,7 +12,11 @@ import FormNuovoLibro from './components/FormNuovoLibro.jsx';
 import DettaglioLibro from './components/DettaglioLibro.jsx';
 import LoginForm from './components/LoginForm.jsx';
 
+//aggiunta in fase di render
+const API_URL = import.meta.env.VITE_API_URL;
+
 function App() {
+
   //Autenticazione
   const [token, setToken] = useState(null);
   const [utente, setUtente] = useState(null);

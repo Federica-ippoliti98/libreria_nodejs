@@ -22,9 +22,16 @@ const libriRouter = require('./routes/libri');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+//app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
+
+// aggiunto in fase di render
+app.use(cors({
+  origin: 'https://libreria-nodejs-1.onrender.com/',
+}));
+
+
 
 app.use('/auth', authRouter);
 
