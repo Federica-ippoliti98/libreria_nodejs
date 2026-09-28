@@ -27,9 +27,13 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // aggiunto in fase di render
+// Sostituisci il vecchio blocco CORS con questo:
 app.use(cors({
-  origin: 'https://libreria-nodejs-1.onrender.com/',
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 
 
 
